@@ -1,155 +1,191 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta name="description" content="CatWISE" />
-  <meta charset="utf-8">
-  <title>CatWISE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <style>
-    body {
-      background-image: url("bg.jpg");
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .banner {
-      grid-area: banner;
-    }
-
-    .content {
-      grid-area: content;
-    }
-
-    .footer {
-      grid-area: footer;
-    }
-
-    .sidebar1 {
-      grid-area: sidebar1;
-    }
-
-    .sidebar2 {
-      grid-area: sidebar2;
-    }
-
-    .wrapper {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: rgba(68, 68, 68);
-    }
-
-    /* Flexible boxes here */
-
-    /* Anything smaller than 600px will be single column */
-    .wrapper {
-      display: grid;
-      grid-gap: 1em;
-      grid-template-areas:
-        "banner"
-        "sidebar1"
-        "content"
-        "sidebar2"
-        "footer"
-    }
-
-    /* If the users screen is >=600px
-    The columns adjust from 3 to 2 columns*/
-
-    @media only screen and (min-width: 600px)  {
-      .wrapper {
-        grid-template-columns: 20% auto;
-        grid-template-areas:
-          "banner   banner"
-          "sidebar1  content"
-          "sidebar2 sidebar2"
-          "footer   footer";
+  <head>
+    <meta name="description" content="CatWISE" />
+    <meta charset="utf-8">
+    <title>CatWISE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+      body {
+        background-image: url("bg.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
       }
-    }
 
-    /* Anything greater than 800px will
-    display the full 3 columns */
-    @media only screen and (min-width: 800px)  {
-      .wrapper {
-        grid-gap: 20px;
-        grid-template-columns: 20% auto 20%;
-        grid-template-areas:
-          "banner  banner  banner"
-          "sidebar1 content sidebar2"
-          "footer  footer  footer";
+      .banner {
+        grid-area: banner;
       }
-    }
 
-    .box {
-      background-color: rgba(240, 240, 255, 0.5);
-      color: #000;
-      border-radius: 5px;
-      padding: 10px;
-      font-family: Arial;
-    }
+      .content {
+        grid-area: content;
+      }
 
-    .banner, .footer {
-      background-color: rgba(204, 204, 204, 0.5);
-      color: #000;
-    }
+      .footer {
+        grid-area: footer;
+      }
 
-    .sidebar2, .sidebar1{
-      background-color: rgba(255, 255, 255, 0.5);
-      color: #000;
-    }
+      .sidebar1 {
+        grid-area: sidebar1;
+      }
 
-  </style>
-</head>
+      .sidebar2 {
+        grid-area: sidebar2;
+      }
 
-<body>
+      .wrapper {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: rgba(68, 68, 68);
+      }
 
-<div class="wrapper">
-  <div class="box banner">
-    Banner image here
-  </div>
-  <div class="box sidebar1">
-    Useful Links
-    <p>
-      <a href="http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/index.html">AllWISE Explanatory Supplement</a>
-    </p>
-    <p>
-      <a href="https://portal.nersc.gov/project/cosmo/temp/ameisner/fulldepth_neo3/">unWISE full depth image coadd database</a>
-    </p>
-    <p>
-      <a href="https://portal.nersc.gov/project/cosmo/temp/ameisner/tr_neo3/">unWISE epoch image coadd database</a>
-    </p>
-    <p>
-        [Coming soon] <a href="/">CatWISE data Overview paper arxiv link</a>
-    </p>
-    <p>
-      <a href="https://irsa.ipac.caltech.edu/applications/WISETiles/">WISE tile lookup URL</a>
-    </p>
-    <p>
-        <a href="http://unwise.me">unWISE landing page</a>
-      </p>
-  </div>
-  <div class="box sidebar2">
-    Graphics here
-  </div>
-  <div class="box content">
-    <h1>CatWISE landing page</h1>
-      CatWISE is an all-sky catalog based on the combination of catalog sources
-      from WISE 2010 and NEOWISE 2013-16. Similar to allWISE, CatWISE includes
-      for every source its brightness, position, and motion. However, CatWISE
-      reveals fainter sources and provides far more accurate measurements of
-      their motions because it is based on 4x the raw data quantity spanned over
-      a 10x greater timespan.
-  </div>
-  <div class="box footer">
-    Footer
-  </div>
-</div>
+      /* Flexible boxes here */
 
+      /* Anything smaller than 600px will be single column */
+      .wrapper {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-areas:
+          "banner"
+          "sidebar1"
+          "content"
+          "sidebar2"
+          "footer"
+      }
 
-</body>
+      /* If the users screen is >=600px
+      The columns adjust from 3 to 2 columns*/
+
+      @media only screen and (min-width: 600px)  {
+        .wrapper {
+          grid-template-columns: 20% auto;
+          grid-template-areas:
+            "banner   banner"
+            "sidebar1  content"
+            "sidebar2 sidebar2"
+            "footer   footer";
+        }
+      }
+
+      /* Anything greater than 800px will
+      display the full 3 columns */
+      @media only screen and (min-width: 800px)  {
+        .wrapper {
+          grid-gap: 20px;
+          grid-template-columns: 20% auto 20%;
+          grid-template-areas:
+            "banner  banner  banner"
+            "sidebar1 content sidebar2"
+            "footer  footer  footer";
+        }
+      }
+
+      .box {
+        background-color: rgba(240, 240, 255, 0.5);
+        color: #000;
+        border-radius: 5px;
+        padding: 10px;
+        font-family: Arial;
+      }
+
+      .banner, .footer {
+        background-color: rgba(204, 204, 204, 0.5);
+        color: #000;
+      }
+
+      .sidebar2, .sidebar1{
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #000;
+      }
+
+      /* Links will be stored as buttons in a button group */
+      .btn-group button {
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(105, 105, 105, 0.5);
+        color: white;
+        padding: 10px 24px;
+        cursor: pointer;
+        /* Make the buttons stack */
+        display: block;
+        width: 100%;
+      }
+
+      .btn-group button:not(:last-child) {
+        /* Prevent double borders */
+        border-bottom: none;
+      }
+
+      /* Add a background color on hover */
+      .btn-group button:hover {
+        background-color: rgba(120, 120, 120, 0.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="box banner">
+        Banner image here
+      </div>
+      <div class="box sidebar1" style="text-align: center">
+        Useful Links
+        <div class="btn-group">
+          <button onclick="window.location.href='http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/index.html'">
+            AllWISE Explanatory Supplement
+          </button>
+          <button onclick="window.location.href='https://portal.nersc.gov/project/cosmo/temp/ameisner/fulldepth_neo3/'">
+            unWISE full depth image coadd database
+          </button>
+          <button onclick="window.location.href='https://portal.nersc.gov/project/cosmo/temp/ameisner/tr_neo3/'">
+            unWISE epoch image coadd database
+          </button>
+          <button>
+            <small style="color: #111; font-style: italic">
+              Coming soon
+            </small>
+            <br>
+            CatWISE data Overview paper arxiv
+          </button>
+          <button onclick="window.location.href='https://irsa.ipac.caltech.edu/applications/WISETiles/'">
+            WISE tile lookup
+          </button>
+          <button onclick="window.location.href='http://unwise.me'">
+            unWISE
+          </button>
+        </div>
+      </div>
+      <div class="box sidebar2">
+        Graphics here
+      </div>
+      <div class="box content">
+        <h1>CatWISE</h1>
+        <hr>
+        <div>
+          <p>
+            CatWISE is an all-sky catalog based on the combination of catalog
+            sources from WISE 2010 and NEOWISE 2013-16.
+          </p>
+          <p>
+            Similar to allWISE, CatWISE includes the brightness,
+            position, and motion for each source.
+          </p>
+          <p>
+            However, CatWISE reveals fainter sources and provides far more
+            accurate measurements of their motions because it is based on
+            <strong>4x</strong>
+            the raw data quantity spanned over a
+            <strong>10x</strong>
+            greater timespan.
+          </p>
+        </div>
+      </div>
+      <div class="box footer">
+        Footer
+      </div>
+    </div>
+  </body>
 </html>
