@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <style>
+    body {
+      background-image: url("bg.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
     .banner {
       grid-area: banner;
     }
@@ -32,8 +40,8 @@
     }
 
     .wrapper {
-      background-color: #fff;
-      color: #444;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: rgba(68, 68, 68);
     }
 
     /* Flexible boxes here */
@@ -78,21 +86,21 @@
     }
 
     .box {
-      background-color: #999;
-      color: #fff;
+      background-color: rgba(240, 240, 255, 0.5);
+      color: #000;
       border-radius: 5px;
       padding: 10px;
       font-family: Arial;
     }
 
     .banner, .footer {
-      background-color: #ccc;
+      background-color: rgba(204, 204, 204, 0.5);
       color: #000;
     }
 
     .sidebar2, .sidebar1{
-      background-color: #777;
-      color: #ddd;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #000;
     }
 
   </style>
@@ -105,22 +113,37 @@
     Banner image here
   </div>
   <div class="box sidebar1">
-    Links here
+    Useful Links
     <p>
-      <a href="/">Link 1 </a>
+      <a href="http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/index.html">AllWISE Explanatory Supplement</a>
     </p>
-        <p>
-      <a href="/">Link 2 </a>
+    <p>
+      <a href="https://portal.nersc.gov/project/cosmo/temp/ameisner/fulldepth_neo3/">unWISE full depth image coadd database</a>
     </p>
-        <p>
-      <a href="/">Link 3 </a>
+    <p>
+      <a href="https://portal.nersc.gov/project/cosmo/temp/ameisner/tr_neo3/">unWISE epoch image coadd database</a>
     </p>
+    <p>
+        [Coming soon] <a href="/">CatWISE data Overview paper arxiv link</a>
+    </p>
+    <p>
+      <a href="https://irsa.ipac.caltech.edu/applications/WISETiles/">WISE tile lookup URL</a>
+    </p>
+    <p>
+        <a href="http://unwise.me">unWISE landing page</a>
+      </p>
   </div>
   <div class="box sidebar2">
     Graphics here
   </div>
   <div class="box content">
-    Main Content
+    <h1>CatWISE landing page</h1>
+      CatWISE is an all-sky catalog based on the combination of catalog sources
+      from WISE 2010 and NEOWISE 2013-16. Similar to allWISE, CatWISE includes
+      for every source its brightness, position, and motion. However, CatWISE
+      reveals fainter sources and provides far more accurate measurements of
+      their motions because it is based on 4x the raw data quantity spanned over
+      a 10x greater timespan.
   </div>
   <div class="box footer">
     Footer
