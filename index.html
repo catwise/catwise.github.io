@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
     <style>
       .banner {
         grid-area: banner;
@@ -34,7 +35,7 @@
       }
 
       .wrapper {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: #2C3531;
         color: rgba(68, 68, 68);
       }
 
@@ -80,21 +81,23 @@
       }
 
       .box {
-        background-color: rgba(240, 240, 255, 0.5);
+        background-color: #c4d2e9;
         color: #000;
         border-radius: 5px;
-        padding: 10px;
+        padding: 10px 30px;
+        /*padding: 10px;*/
         font-family: Arial;
       }
 
       .banner, .footer {
-        background-color: rgba(204, 204, 204, 0.5);
+        background-color: #c4d2e9;
         color: #000;
       }
 
       .sidebar2, .sidebar1{
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: #637896;
         color: #000;
+        border-radius: 5px;
       }
 
       /* CatWISE Gallery*/
@@ -107,8 +110,9 @@
 
       /* Links will be stored as buttons in a button group */
       .btn-group button {
-        background-color: rgba(255, 255, 255, 0.3);
-        border: 1px solid rgba(105, 105, 105, 0.5);
+        background-color: #2C3531;
+        border: 1px solid #334148;
+        border-radius: 3px; /* rounded borders */
         color: white;
         padding: 10px 24px;
         cursor: pointer;
@@ -124,7 +128,8 @@
 
       /* Add a background color on hover */
       .btn-group button:hover {
-        background-color: rgba(120, 120, 120, 0.5);
+        /*background-color: rgba(120, 120, 120, 0.5);*/
+        background-color: #D9B08C;
       }
 
       /* Modal: A modal is a dialog box/popup window 
@@ -219,7 +224,7 @@
         top: 0;
       }
 
-      /* Caption for each image modal in CatWISE Gallery */
+      /* Text caption for each image modal in CatWISE Gallery */
       .caption-container {
         text-align: center;
         background-color: black;
@@ -263,6 +268,12 @@
       .preview_gallery {
         background-color: white;
         color: white;
+      }
+
+      /* Set text for entire html document */
+     
+      html * {
+       font-family: 'Archivo', Arial;
       }
 
     </style>
@@ -320,7 +331,7 @@
             height="100%">
       </div>
       <div class="box sidebar1" style="text-align: center">
-        Useful Links
+        <h2 style="text-align:center">Useful Links</h2>
         <div class="btn-group">
           <button onclick="window.location.href='http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/index.html'">
             AllWISE Explanatory Supplement
@@ -332,7 +343,7 @@
             unWISE epoch image coadd database
           </button>
           <button>
-            <small style="color: #111; font-style: italic">
+            <small style="color: red; font-style: italic">
               Coming soon
             </small>
             <br>
@@ -458,6 +469,12 @@
               </div>
           </div>
         </div>
+    </div>
+    <div class="box footer">
+      <img
+        src="img/screencap.png"
+        style="width:100%"
+        alt="Comparison of AllWISE and CatWISE astrometric performance">
     </div>
   </body>
 </html>
