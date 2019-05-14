@@ -35,7 +35,7 @@
       }
 
       .wrapper {
-        background-color: #2C3531;
+        background-color: #2C3531; /* Deep-Dark Blue Background */
         color: rgba(68, 68, 68);
       }
 
@@ -81,7 +81,7 @@
       }
 
       .box {
-        background-color: #c4d2e9;
+        background-color: #C4D2E9; /* Light Blue */
         color: #000;
         border-radius: 5px;
         padding: 10px 30px;
@@ -90,12 +90,12 @@
       }
 
       .banner, .footer {
-        background-color: #c4d2e9;
+        background-color: #C4D2E9; /* Light Blue */
         color: #000;
       }
 
       .sidebar2, .sidebar1{
-        background-color: #637896;
+        background-color: #637896; /* Medium-Dark Blue */
         color: #000;
         border-radius: 5px;
       }
@@ -108,9 +108,10 @@
       margin-bottom: -4px;
       }
 
+
       /* Links will be stored as buttons in a button group */
       .btn-group button {
-        background-color: #2C3531;
+        background-color: #2C3531; /* Deep-Dark Blue*/
         border: 1px solid #334148;
         border-radius: 3px; /* rounded borders */
         color: white;
@@ -126,10 +127,15 @@
         border-bottom: none;
       }
 
+      /* Adjust margin on last child to compinsate type.less css*/
+      .btn-group  {
+        margin-bottom: 20px;
+      }
+
       /* Add a background color on hover */
       .btn-group button:hover {
         /*background-color: rgba(120, 120, 120, 0.5);*/
-        background-color: #D9B08C;
+        background-color: #D9B08C; /* Orange */
       }
 
       /* Modal: A modal is a dialog box/popup window 
@@ -147,7 +153,7 @@
         width: 100%;
         height: 100%;
         overflow: auto;
-        background-color: black;
+        background-color: rgba(99, 120, 150, 0.6); /* #637896 Medium-Dark Blue */
       }
 
       /* Modal Content */
@@ -162,7 +168,9 @@
 
       /* The Close Button */
       .close {
-        color: #FFFFFF; /* white */
+        color: black;
+        background-color:  #D9B08C; /* Orange */
+        opacity: 0.7;
         position: absolute;
         top: 10px;
         right: 25px;
@@ -172,7 +180,8 @@
 
       .close:hover,
       .close:focus {
-        color: #999;
+        color:  #D9B08C; /* Orange */
+        opacity: 1.0;
         text-decoration: none;
         cursor: pointer;
       }
@@ -194,7 +203,7 @@
         width: auto;
         padding: 16px;
         margin-top: -50px;
-        color: #515151; /* Dark Grey */
+        color: #D9B08C; /* Orange */
         font-weight: bold;
         font-size: 20px;
         transition: 0.6s ease;
@@ -212,12 +221,12 @@
       /* On hover, add a black background color with a little bit see-through */
       .prev:hover,
       .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: #F9C99F; /* Light Orange */
       }
 
       /* Number text (1/3 etc) */
       .numbertext {
-        color: #515151;
+        color: #D9B08C; /* Orange */
         font-size: 12px;
         padding: 8px 12px;
         position: absolute;
