@@ -168,8 +168,7 @@
 
       /* The Close Button */
       .close {
-        color: black;
-        background-color:  #D9B08C; /* Orange */
+        color: #ED7B17; /* Bright Orange */
         opacity: 0.7;
         position: absolute;
         top: 10px;
@@ -180,7 +179,8 @@
 
       .close:hover,
       .close:focus {
-        color:  #D9B08C; /* Orange */
+        color:   black;
+        background-color: #F9C99F; /* Light Orange */
         opacity: 1.0;
         text-decoration: none;
         cursor: pointer;
@@ -203,7 +203,8 @@
         width: auto;
         padding: 16px;
         margin-top: -50px;
-        color: #D9B08C; /* Orange */
+        color: #ED7B17; /* Bright Orange */
+        opacity: 0.8;
         font-weight: bold;
         font-size: 20px;
         transition: 0.6s ease;
@@ -226,7 +227,7 @@
 
       /* Number text (1/3 etc) */
       .numbertext {
-        color: #D9B08C; /* Orange */
+        color: #ED7B17; /* Bright Orange */
         font-size: 12px;
         padding: 8px 12px;
         position: absolute;
@@ -345,11 +346,7 @@
            <button onclick="window.location.href='https://portal.nersc.gov/project/cosmo/data/CatWISE/'">
              CatWISE data access
           </button>
-          <button>
-            <small style="color: red; font-style: italic">
-              Coming soon
-            </small>
-            <br>
+          <button onclick="window.open('CatWISEoverview20190415.pdf')">
             CatWISE overview paper
           </button>
           <button onclick="window.location.href='catwiseteam.txt'">
