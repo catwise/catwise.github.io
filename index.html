@@ -134,7 +134,6 @@
 
       /* Add a background color on hover */
       .btn-group button:hover {
-        /*background-color: rgba(120, 120, 120, 0.5);*/
         background-color: #D9B08C; /* Orange */
       }
 
@@ -169,7 +168,7 @@
       /* The Close Button */
       .close {
         color: #ED7B17; /* Bright Orange */
-        opacity: 0.7;
+        opacity: 0.8;
         position: absolute;
         top: 10px;
         right: 25px;
@@ -229,10 +228,18 @@
       /* Number text (1/3 etc) */
       .numbertext {
         color: #ED7B17; /* Bright Orange */
+        background-color: rgb(0, 0, 0, 0.1); /* Black */
+        border-radius: 3px 3px;
         font-size: 12px;
         padding: 8px 12px;
         position: absolute;
         top: 0;
+      }
+      .numbertext:hover {
+        color: black; 
+        background-color: #ED7B17; /* Bright Orange */
+        opacity: 0.8;
+        transition: 0.6s ease;
       }
 
       /* Text caption for each image modal in CatWISE Gallery */
@@ -257,8 +264,8 @@
       }
 
       .hover-shadow:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6),
+        0 6px 20px 0 rgba(0, 0, 0, 0.57);
       }
 
       .row > .column {
@@ -374,11 +381,12 @@
         <!-- Graphics here -->
         <!-- TODO: Adjust style for images diplayed -->
         <h3 style="text-align:center">CatWISE Gallery</h3>
+        <!-- CatWISE Modal Part 1: Display the gallery on webpage -->
         <p>
           <img
-            id="graphic_3"
+            id="graphic_1"
             src="img/CatWISE_vs_AllWISE.png"
-            onclick="openModal();currentSlide(3)"
+            onclick="openModal();currentSlide(1)"
             class="hover-shadow cursor"
             alt="CatWISE_vs_AllWISE.png">
         </p>
@@ -423,9 +431,15 @@
           <div class="modal-content">
               <div class="mySlides">
                 <div class="numbertext">
-                  3 / 3
+                  1 / 2
                 </div>
                 <img src="img/CatWISE_vs_AllWISE.png" style="width:100%" alt="CatWISE_vs_AllWISE.png">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">
+                  2 / 2
+                </div>
+                <img src="img/photometric_redshift_distribution.png" style="width:100%" alt="photometric_redshift_distribution.png">
               </div>
               <a class="prev" onclick="plusSlides(-1)">
                 &#10094;
@@ -442,8 +456,16 @@
                     class="demo cursor"
                     src="img/CatWISE_vs_AllWISE.png"
                     style="width:100%"
-                    onclick="currentSlide(3)"
+                    onclick="currentSlide(1)"
                     alt="Comparison of AllWISE and CatWISE astrometric performance">
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="img/photometric_redshift_distribution.png"
+                    style="width:100%"
+                    onclick="currentSlide(2)"
+                    alt="Photometric Redshift Distribution">
                 </div>
               </div>
           </div>
