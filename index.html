@@ -352,25 +352,30 @@
         <h3 style="text-align:center">Useful Links</h3>
         <div class="btn-group">
            <button onclick="window.location.href='https://portal.nersc.gov/project/cosmo/data/CatWISE/'">
-             CatWISE data access
+             CatWISE Data Access
           </button>
-          <button onclick="window.open('CatWISEoverview20190514.pdf')">
-            CatWISE overview paper - Coming Soon
+          <!-- <button onclick="window.open('CatWISEoverview.pdf')"> -->
+          <button>
+            <small style="color: red; font-style: italic">
+              Coming Soon
+            </small> 
+            <br>           
+            CatWISE Overview Paper
           </button>
           <button onclick="window.location.href='catwiseteam.txt'">
-            CatWISE team
+            CatWISE Team
           </button>
           <button onclick="window.location.href='https://irsa.ipac.caltech.edu/applications/WISETiles/'">
-            WISE tile lookup service
+            WISE Tile Lookup Service
           </button>
           <button onclick="window.location.href='http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/index.html'">
             AllWISE Explanatory Supplement
           </button>
           <button onclick="window.location.href='http://unwise.me/data/neo3/unwise-coadds/fulldepth/'">
-            unWISE full-depth coadd images
+            unWISE Full-Depth Coadd Images
           </button>
           <button onclick="window.location.href='http://unwise.me/tr_neo3/'">
-            unWISE epoch coadd images
+            unWISE Epoch Coadd Images
           </button>
           <button onclick="window.location.href='http://unwise.me'">
             unWISE
@@ -378,10 +383,10 @@
         </div>
       </div>
       <div class="box sidebar2">
-        <!-- Graphics here -->
+        <!-- Graphics here - CatWISE Gallery -->
         <!-- TODO: Adjust style for images diplayed -->
         <h3 style="text-align:center">CatWISE Gallery</h3>
-        <!-- CatWISE Modal Part 1: Display the gallery on webpage -->
+        <!-- CatWISE Modal Part 1: Display the link to Modal -->
         <p>
           <img
             id="graphic_1"
@@ -423,7 +428,7 @@
           </p>
         </div>
       </div>
-        <!-- TODO close modal on escape -->
+        <!-- CatWISE Modal Part 2: Content of Modal -->
         <div id="myModal" class="modal">
           <span class="close cursor" onclick="closeModal()">
             &times;
