@@ -186,7 +186,7 @@
         cursor: pointer;
       }
 
-      .mySlides {
+      .Gallery_Slides {
         display: none;
       }
 
@@ -294,16 +294,42 @@
        font-family: 'Archivo', Arial;
       }
 
+      /* Table Style */
+      #members {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #members td, #members th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #members tr:nth-child(even){background-color: #f2f2f2;}
+
+      #members tr:hover {background-color: #ddd;}
+
+      #members th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #D9B08C; /* Orange */
+        color: white;
+      }
+
+      #Team_Modal {
+        padding: 10px 0px;
+      }
     </style>
     <!-- JS code -->
     <!-- Code for CatWISE Gallery image modals -->
     <script type="text/javascript">
       function openModal() {
-        document.getElementById('myModal').style.display = "block";
+        document.getElementById('Gallery_Modal').style.display = "block";
       }
 
       function closeModal() {
-        document.getElementById('myModal').style.display = "none";
+        document.getElementById('Gallery_Modal').style.display = "none";
       }
 
       var slideIndex = 1;
@@ -319,7 +345,7 @@
 
       function showSlides(n) {
         var i;
-        var slides = document.getElementsByClassName("mySlides");
+        var slides = document.getElementsByClassName("Gallery_Slides");
         var dots = document.getElementsByClassName("demo");
         var captionText = document.getElementById("caption");
         if (n > slides.length) {slideIndex = 1}
@@ -334,6 +360,14 @@
         dots[slideIndex-1].className += " active";
         captionText.innerHTML = dots[slideIndex-1].alt;
       }    
+
+      function openTeam() {
+        document.getElementById('Team_Modal').style.display = "block";
+      }
+      function closeTeam() {
+        document.getElementById('Team_Modal').style.display = "none";
+      }
+
     </script>
     
   </head>
@@ -357,7 +391,7 @@
           <button onclick="window.open('CatWISEoverview2019may14.pdf')">   
             CatWISE Overview Paper
           </button>
-          <button onclick="window.location.href='catwiseteam.txt'">
+          <button onclick="openTeam();">
             CatWISE Team
           </button>
           <button onclick="window.location.href='https://irsa.ipac.caltech.edu/applications/WISETiles/'">
@@ -426,24 +460,24 @@
           <p>
             The CatWISE effort is led by the Jet Propulsion Laboratory, California Institute of Technology, 
             with funding from NASA's Astrophysics Data Analysis Program. 
-            The CatWISE <a href='catwiseteam.txt'>team</a> is led by Principal Investigator 
+            The CatWISE <a onclick="openTeam();">team</a> is led by Principal Investigator 
             Peter Eisenhardt.
           </p>
         </div>
       </div>
         <!-- CatWISE Modal Part 2: Content of Modal -->
-        <div id="myModal" class="modal">
+        <div id="Gallery_Modal" class="modal">
           <span class="close cursor" onclick="closeModal()">
             &times;
           </span>
           <div class="modal-content">
-              <div class="mySlides">
+              <div class="Gallery_Slides">
                 <div class="numbertext">
                   1 / 2
                 </div>
                 <img src="img/CatWISE_vs_AllWISE.png" style="width:100%" alt="CatWISE_vs_AllWISE.png">
               </div>
-              <div class="mySlides">
+              <div class="Gallery_Slides">
                 <div class="numbertext">
                   2 / 2
                 </div>
@@ -478,6 +512,112 @@
               </div>
           </div>
         </div>
+        <div id="Team_Modal" class="modal">
+          <span class="close cursor" onclick="closeTeam()">
+            &times;
+          </span>
+          <div class="modal-content">
+            <table id="members">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+              <tr>
+                <td>Peter Eisenhardt (PI; JPL)</td>
+                <td><a href="mailto: peter.r.eisenhardt@jpl.nasa.gov">peter.r.eisenhardt@jpl.nasa.gov</td>
+              </tr>
+              <tr>
+                <td>Dan Caselden (Gigamon ATR)</td>
+                <td><a href="mailto: dancaselden@gmail.com">dancaselden@gmail.com</a></td>
+              </tr>
+              <tr>
+                <td>Mike Cushing (U. of Toledo)</td>
+                <td><a href="mailto: michael.cushing@gmail.com">michael.cushing@gmail.com</a></td>
+              </tr>
+              <tr>
+                <td>Roc Cutri (IPAC)</td>
+                <td><a href="mailto: roc@ipac.caltech.edu">roc@ipac.caltech.edu</a></td>
+              </tr>
+              <tr>
+                <td>Jackie Faherty (AMNH)</td>
+                <td><a href="mailto: jfaherty17@gmail.com">jfaherty17@gmail.com</a></td>
+              </tr>
+              <tr>
+                <td>John Fowler (IPAC)</td>
+                <td><a href="mailto: jwfowler@caltech.edu">jwfowler@caltech.edu</a></td>
+              </tr>
+              <tr>
+                <td>Nelson Garcia (IPAC)</td>
+                <td><a href="mailto: ngarcia@ipac.caltech.edu">ngarcia@ipac.caltech.edu</a></td>
+              </tr>
+              <tr>
+                <td>Chris Gelino (IPAC)</td>
+                <td><a href="mailto: cgelino@ipac.caltech.edu">cgelino@ipac.caltech.edu</a></td>
+              </tr>
+              <tr>
+                <td>Anthony Gonzalez (U. Florida)</td>
+                <td><a href="mailto: anthonyhg@astro.ufl.edu">anthonyhg@astro.ufl.edu</a></td>
+              </tr>
+              <tr>
+                <td>Tom Jarrett (U. Capetown)</td>
+                <td><a href="mailto: jarrett@ast.uct.ac.za">jarrett@ast.uct.ac.za</a></td>
+              </tr>
+              <tr>
+                <td>Davy Kirkpatrick (IPAC)</td>
+                <td><a href="mailto: davy@ipac.caltech.edu">davy@ipac.caltech.edu</a></td>
+              </tr>
+              <tr>
+                <td>Renata Koontz (UC Riverside)</td>
+                <td><a href="mailto: rkoon001@ucr.edu">rkoon001@ucr.edu</a></td>
+              </tr>
+              <tr>
+                <td>Amy Mainzer (JPL)</td>
+                <td><a href="mailto: Amy.Mainzer@jpl.nasa.gov">Amy.Mainzer@jpl.nasa.gov</a></td>
+              </tr>
+              <tr>
+                <td>Elijah Marchese (UC Riverside)</td>
+                <td><a href="mailto: elijahmarchese1216@gmail.com">elijahmarchese1216@gmail.com</a></td>
+              </tr>
+              <tr>
+                <td>Federico Marocco (JPL)</td>
+                <td><a href="mailto: federico.marocco@jpl.nasa.gov">federico.marocco@jpl.nasa.gov</a></td>
+              </tr>
+              <tr>
+                <td>Aaron Meisner (NOAO)</td>
+                <td><a href="mailto: ameisner@lbl.gov">ameisner@lbl.gov</a></td>
+              </tr>
+              <tr>
+                <td>Bahram Mobasher (UC Riverside)</td>
+                <td><a href="mailto: mobasher@ucr.edu">mobasher@ucr.edu</a></td>
+              </tr>
+              <tr>
+                <td>Melany Roberts</td>
+                <td><a href="mailto: sigmaphi@yahoo.com">sigmaphi@yahoo.com</a></td>
+              </tr>
+              <tr>
+                <td>David Schlegel (LBL)</td>
+                <td><a href="mailto: DJSchlegel@lbl.gov">DJSchlegel@lbl.gov</a></td>
+              </tr>
+              <tr>
+                <td>Daniel Stern (JPL)</td>
+                <td><a href="mailto: daniel.k.stern@gmail.com">daniel.k.stern@gmail.com</a></td>
+              </tr>
+              <tr>
+                <td>Adam Stanford (UC Davis)</td>
+                <td><a href="mailto: stanford@physics.ucdavis.edu">stanford@physics.ucdavis.edu</a></td>
+              </tr>
+              <tr>
+                <td>Harry Teplitz (IPAC)</td>
+                <td><a href="mailto: hit@ipac.caltech.edu">hit@ipac.caltech.edu</a></td>
+              </tr>
+              <tr>
+                <td>Ned Wright (UCLA)</td>
+                <td><a href="mailto: wright@astro.ucla.edu">wright@astro.ucla.edu</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
