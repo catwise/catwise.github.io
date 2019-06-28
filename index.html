@@ -367,6 +367,12 @@
       function closeTeam() {
         document.getElementById('Team_Modal').style.display = "none";
       }
+            function openScience() {
+        document.getElementById('Science_Modal').style.display = "block";
+      }
+      function closeScience() {
+        document.getElementById('Science_Modal').style.display = "none";
+      }
 
     </script>
     
@@ -391,7 +397,7 @@
           <button onclick="window.open('CatWISEoverview2019jun06.pdf')">   
             CatWISE Overview Paper
           </button>
-          <button onclick="window.location.href='https://arxiv.org/abs/1906.08913'">   
+          <button onclick="openScience();">   
             CatWISE Science Results
           </button>
           <button onclick="openTeam();">
@@ -516,7 +522,25 @@
               </div>
           </div>
         </div>
-        <div id="Team_Modal" class="modal">
+      <div id="Science_Modal" class="modal">
+          <span class="close cursor" onclick="closeScience()">
+            &times;
+          </span>
+          <div class="modal-content">
+            <table id="members">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+              <tr>
+                <td>Peter Eisenhardt (PI; JPL)</td>
+                <td><a href="mailto: peter.r.eisenhardt@jpl.nasa.gov">peter.r.eisenhardt@jpl.nasa.gov</td>
+              </tr>
+            </table>
+        </div>
+
+
+      <div id="Team_Modal" class="modal">
           <span class="close cursor" onclick="closeTeam()">
             &times;
           </span>
